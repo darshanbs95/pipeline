@@ -1,0 +1,17 @@
+pipeline { 
+         agent { label 'master' }
+         stages {
+              stage('Both build and test'){
+                  parallel { 
+                     stage('Build'){
+                        steps { 
+                              sh 'sleep 15: echo "This is a Build stage" '
+                           
+                                   }
+                                 }
+                             }         
+              
+ 
+                          }
+                        }
+                     }
